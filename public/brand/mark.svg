@@ -1,0 +1,33 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Nepal Travel & Trek mark">
+  <defs>
+    <linearGradient id="gSky" x1="94" y1="72" x2="432" y2="440" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B3A6A"/>
+      <stop offset="0.55" stop-color="#0A8F82"/>
+      <stop offset="1" stop-color="#12B981"/>
+    </linearGradient>
+    <linearGradient id="gSun" x1="300" y1="118" x2="420" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFCC66"/>
+      <stop offset="1" stop-color="#F59E0B"/>
+    </linearGradient>
+    <filter id="softShadow" x="0" y="0" width="512" height="512" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="10" stdDeviation="18" flood-color="#0B1220" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <!-- Rounded badge -->
+  <g filter="url(#softShadow)">
+    <path d="M120 64H392C423.137 64 448 88.8629 448 120V392C448 423.137 423.137 448 392 448H120C88.8629 448 64 423.137 64 392V120C64 88.8629 88.8629 64 120 64Z" fill="url(#gSky)"/>
+  </g>
+
+  <!-- Sun -->
+  <circle cx="354" cy="178" r="56" fill="url(#gSun)"/>
+
+  <!-- Mountain range -->
+  <path d="M108 360L188 246C194 238 206 238 212 246L258 312L306 258C312 251 324 251 330 258L404 360H108Z" fill="#EAF2FF" opacity="0.96"/>
+  <path d="M176 360L230 294L260 332L300 288L350 360H176Z" fill="#D7E6FF" opacity="0.95"/>
+
+  <!-- Trail line -->
+  <path d="M152 392C196 360 222 354 252 350C284 346 310 334 332 314C352 296 368 280 394 268" stroke="#0B1220" stroke-opacity="0.38" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="154" cy="392" r="10" fill="#0B1220" fill-opacity="0.45"/>
+</svg>
+

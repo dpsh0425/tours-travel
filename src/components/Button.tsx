@@ -1,25 +1,23 @@
 import Link from "next/link";
-import { type ReactNode } from "react";
+import { type ReactNode, ButtonHTMLAttributes } from "react";
 
-interface ButtonProps {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   href?: string;
-  onClick?: () => void;
   variant?: "primary" | "secondary" | "danger";
   className?: string;
-  type?: "button" | "submit" | "reset";
 }
 
 export default function Button({
   children,
   href,
-  onClick,
   variant = "primary",
   className = "",
-  type = "button",
+  ...props
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-center focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-white disabled:opacity-60 disabled:cursor-not-allowed";
+
   const variants = {
     primary:
       "bg-[var(--brand-2)] text-white hover:translate-y-[-1px] hover:shadow-[var(--shadow-soft)] active:translate-y-[0px] active:shadow-none",
@@ -40,7 +38,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={combinedClassName}>
+    <button className={combinedClassName} {...props}>
       {children}
     </button>
   );
